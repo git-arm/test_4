@@ -6,7 +6,7 @@ datetime
 numpy
 pandas
 mysql.connector
-time
+time==3.7
 select
 json
 configparser
