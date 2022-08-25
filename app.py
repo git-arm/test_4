@@ -2,7 +2,6 @@ import pandas as pd
 import datetime
 import numpy as np
 import mysql.connector
-import select
 import json
 import datetime
 from flask import Flask, make_response, Response
