@@ -30,7 +30,7 @@ def sp_energy():
 
 @app.route("/")
 def hello():
-    return render_template('index.html')
+    return render_template('ems_test_v20.html')
 
 if __name__ == "__main__":
     app.run()
