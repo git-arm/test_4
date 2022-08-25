@@ -6,6 +6,3 @@ datetime
 numpy
 pandas
 mysql.connector
-json
-configparser
-csv
