@@ -59,7 +59,7 @@ def data():
         db = mysql.connector.connect(user="sql6514334", password="U2m8kZqyVm", host="sql6.freesqldatabase.com", database="sql6514334",
                                      port="3306")
         db_cursor = db.cursor()
-        stmt1 = "SELECT voltage from jspl_wrm.bokaro_1 WHERE meter_id = %s"
+        stmt1 = "SELECT voltage from sql6514334.bokaro_1 WHERE meter_id = %s"
         data1 = meter_id
         db_cursor.execute(stmt1,data1)
         data1 = db_cursor.fetchall()
@@ -78,7 +78,7 @@ def data():
         db2 = mysql.connector.connect(user="sql6514334", password="U2m8kZqyVm", host="sql6.freesqldatabase.com", database="sql6514334",
                                      port="3306")
         db2_cursor = db2.cursor()
-        stmt2 = "SELECT time_stamp from bokaro_1 WHERE meter_id = %s"
+        stmt2 = "SELECT time_stamp from sql6514334.bokaro_1 WHERE meter_id = %s"
         data2_m = meter_id
         db2_cursor.execute(stmt2,data2_m)
         data2 = db2_cursor.fetchall()
@@ -97,7 +97,7 @@ def data():
         db = mysql.connector.connect(user="sql6514334", password="U2m8kZqyVm", host="sql6.freesqldatabase.com", database="sql6514334",
                                      port="3306")
         db_cursor = db.cursor()
-        stmt1 = "SELECT current from jspl_wrm.bokaro_1 WHERE meter_id = %s"
+        stmt1 = "SELECT current from sql6514334.bokaro_1 WHERE meter_id = %s"
         data3_m = meter_id
         db_cursor.execute(stmt1,data3_m)
         data3 = db_cursor.fetchall()
@@ -116,7 +116,7 @@ def data():
         db = mysql.connector.connect(user="sql6514334", password="U2m8kZqyVm", host="sql6.freesqldatabase.com", database="sql6514334",
                                      port="3306")
         db_cursor = db.cursor()
-        stmt1 = "SELECT frequency from jspl_wrm.bokaro_1 WHERE meter_id = %s"
+        stmt1 = "SELECT frequency from sql6514334.bokaro_1 WHERE meter_id = %s"
         data4_m = meter_id
         db_cursor.execute(stmt1,data4_m)
         data4 = db_cursor.fetchall()
@@ -134,7 +134,7 @@ def data():
         db2 = mysql.connector.connect(user="sql6514334", password="U2m8kZqyVm", host="sql6.freesqldatabase.com", database="sql6514334",
                                      port="3306")
         db2_cursor = db2.cursor()
-        stmt2 = "SELECT total_harmonic_distortion from bokaro_1 WHERE meter_id = %s"
+        stmt2 = "SELECT total_harmonic_distortion from sql6514334.bokaro_1 WHERE meter_id = %s"
         data2_m = meter_id
         db2_cursor.execute(stmt2,data2_m)
         data2 = db2_cursor.fetchall()
@@ -153,7 +153,7 @@ def data():
         db2 = mysql.connector.connect(user="sql6514334", password="U2m8kZqyVm", host="sql6.freesqldatabase.com", database="sql6514334",
                                      port="3306")
         db2_cursor = db2.cursor()
-        stmt2 = "SELECT apparent_energy from bokaro_1 WHERE meter_id = %s"
+        stmt2 = "SELECT apparent_energy from sql6514334.bokaro_1 WHERE meter_id = %s"
         data2_m = meter_id
         db2_cursor.execute(stmt2,data2_m)
         data2 = db2_cursor.fetchall()
@@ -172,7 +172,7 @@ def data():
         db2 = mysql.connector.connect(user="sql6514334", password="U2m8kZqyVm", host="sql6.freesqldatabase.com", database="sql6514334",
                                      port="3306")
         db2_cursor = db2.cursor()
-        stmt2 = "SELECT power_factor from bokaro_1 WHERE meter_id = %s"
+        stmt2 = "SELECT power_factor from sql6514334.bokaro_1 WHERE meter_id = %s"
         data2_m = meter_id
         db2_cursor.execute(stmt2,data2_m)
         data2 = db2_cursor.fetchall()
@@ -191,7 +191,7 @@ def data():
         db2 = mysql.connector.connect(user="sql6514334", password="U2m8kZqyVm", host="sql6.freesqldatabase.com", database="sql6514334",
                                      port="3306")
         db2_cursor = db2.cursor()
-        stmt2 = "SELECT energy from bokaro_1 WHERE meter_id = %s"
+        stmt2 = "SELECT energy from sql6514334.bokaro_1 WHERE meter_id = %s"
         data2_m = meter_id
         db2_cursor.execute(stmt2,data2_m)
         data2 = db2_cursor.fetchall()
@@ -210,7 +210,7 @@ def data():
         db2 = mysql.connector.connect(user="sql6514334", password="U2m8kZqyVm", host="sql6.freesqldatabase.com", database="sql6514334",
                                      port="3306")
         db2_cursor = db2.cursor()
-        stmt2 = "SELECT power from bokaro_1 WHERE meter_id = %s"
+        stmt2 = "SELECT power from sql6514334.bokaro_1 WHERE meter_id = %s"
         data2_m = meter_id
         db2_cursor.execute(stmt2,data2_m)
         data2 = db2_cursor.fetchall()
@@ -229,7 +229,7 @@ def data():
         db2 = mysql.connector.connect(user="sql6514334", password="U2m8kZqyVm", host="sql6.freesqldatabase.com", database="sql6514334",
                                      port="3306")
         db2_cursor = db2.cursor()
-        stmt2 = "SELECT apparent_power from bokaro_1 WHERE meter_id = %s"
+        stmt2 = "SELECT apparent_power from sql6514334.bokaro_1 WHERE meter_id = %s"
         data2_m = meter_id
         db2_cursor.execute(stmt2,data2_m)
         data2 = db2_cursor.fetchall()
@@ -248,7 +248,7 @@ def data():
         db2 = mysql.connector.connect(user="sql6514334", password="U2m8kZqyVm", host="sql6.freesqldatabase.com", database="sql6514334",
                                      port="3306")
         db2_cursor = db2.cursor()
-        stmt2 = "SELECT location from bokaro_1_loc WHERE meter_id = %s"
+        stmt2 = "SELECT location from sql6514334.bokaro_1_loc WHERE meter_id = %s"
         data2_m = meter_id
         db2_cursor.execute(stmt2,data2_m)
         data2 = db2_cursor.fetchall()
@@ -287,7 +287,7 @@ def getPlotCSV():
         db = mysql.connector.connect(user="sql6514334", password="U2m8kZqyVm", host="sql6.freesqldatabase.com", database="sql6514334",
                                      port="3306")
         db_cursor = db.cursor()
-        stmt1 = "SELECT * from jspl_wrm.bokaro_1 WHERE meter_id =%s "
+        stmt1 = "SELECT * from sql6514334.bokaro_1 WHERE meter_id =%s "
         data5_m = meter_id
         db_cursor.execute(stmt1, data5_m)
         data5 = db_cursor.fetchall()
@@ -334,7 +334,7 @@ def getexcel():
         db = mysql.connector.connect(user="sql6514334", password="U2m8kZqyVm", host="sql6.freesqldatabase.com", database="sql6514334",
                                      port="3306")
         db_cursor = db.cursor()
-        stmt1 = "SELECT * from jspl_wrm.bokaro_1 "
+        stmt1 = "SELECT * from sql6514334.bokaro_1 "
         data5_m = meter_id
         db_cursor.execute(stmt1)
         data7 = db_cursor.fetchall()
@@ -362,7 +362,7 @@ def historical():
         db = mysql.connector.connect(user="sql6514334", password="U2m8kZqyVm", host="sql6.freesqldatabase.com", database="sql6514334",
                                      port="3306")
         db_cursor = db.cursor()
-        stmt1 = "SELECT * from jspl_wrm.bokaro_1 "
+        stmt1 = "SELECT * from sql6514334.bokaro_1 "
         data5_m = meter_id
         db_cursor.execute(stmt1)
         data8 = db_cursor.fetchall()
@@ -389,7 +389,7 @@ def sp_energy():
         db = mysql.connector.connect(user="sql6514334", password="U2m8kZqyVm", host="sql6.freesqldatabase.com", database="sql6514334",
                                      port="3306")
         db_cursor = db.cursor()
-        stmt1 = "SELECT SUM(energy) from jspl_wrm.bokaro_1 WHERE time_stamp BETWEEN %s AND %s"
+        stmt1 = "SELECT SUM(energy) from sql6514334.bokaro_1 WHERE time_stamp BETWEEN %s AND %s"
         data_allday_yesterday = (yesterday_midnight.timestamp(), midnight.timestamp())
         data5_m = meter_id
         db_cursor.execute(stmt1,data_allday_yesterday)
