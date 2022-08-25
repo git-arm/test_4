@@ -27,10 +27,13 @@ def sp_energy():
     return response4
 
 
+@app.route("/historic")
+def historic():
+    return render_template('historic.html')
 
 @app.route("/")
 def hello():
-    return render_template('index1.html')
+    return render_template('ems_test_v20.html')
 
 if __name__ == "__main__":
     app.run()
