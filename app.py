@@ -2,7 +2,6 @@ import pandas as pd
 import datetime
 import numpy as np
 import mysql.connector
-import time
 import select
 import json
 import datetime
