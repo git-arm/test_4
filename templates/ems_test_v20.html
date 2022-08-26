@@ -278,7 +278,7 @@
                 function requestData()
                 {
                     // Ajax call to get the Data from Flask
-                    var requests = $.get('/data');
+                    var requests = $.get('https://bslems.azurewebsites.net/data');
         
                     var tm = requests.done(function (result)
                     {
