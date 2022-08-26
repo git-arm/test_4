@@ -6,4 +6,3 @@ datetime
 numpy
 pandas
 mysql.connector
-az webapp up -n surveyordemohtmlpage -g Armatrics --plan ASP-Armatrics-b7dc(B1: 1) -l eastasia
