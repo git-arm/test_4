@@ -19,7 +19,7 @@ yesterday_midnight = midnight - timedelta(days=1)
 app = Flask(__name__)
 
 
-@app.route('/data', methods =["GET", "POST"])
+@app.route('bslems.azurewebsites.net/data', methods =["GET", "POST"])
 def data():
     global meter_id
     try:
@@ -239,7 +239,7 @@ def data():
     return response1
 
 
-@app.route("/", methods=["POST"])
+@app.route("bslems.azurewebsites.net/", methods=["POST"])
 def meter():
     global meter_id
     meter_id = [int(request.form.get("meter_id"))]
@@ -248,7 +248,7 @@ def meter():
     return render_template('ems_test_v20.html')
 
 
-@app.route("/getPlotCSV")
+@app.route("bslems.azurewebsites.net/getPlotCSV")
 def getPlotCSV():
     try:
         db = mysql.connector.connect(user="sql6514334", password="U2m8kZqyVm", host="sql6.freesqldatabase.com", database="sql6514334",
@@ -295,7 +295,7 @@ def getPlotCSV():
                 "attachment; filename = BSL_EMS_meterdata.csv"})
 
 
-@app.route("/getexcel")#, methods=["GET","POST"])
+@app.route("bslems.azurewebsites.net/getexcel")#, methods=["GET","POST"])
 def getexcel():
     try:
         db = mysql.connector.connect(user="sql6514334", password="U2m8kZqyVm", host="sql6.freesqldatabase.com", database="sql6514334",
@@ -323,7 +323,7 @@ def getexcel():
     return render_template("datasheet.html", data=(b_val))
 
 
-@app.route("/historical", methods=["POST"])
+@app.route("bslems.azurewebsites.net/historical", methods=["POST"])
 def historical():
     try:
         db = mysql.connector.connect(user="sql6514334", password="U2m8kZqyVm", host="sql6.freesqldatabase.com", database="sql6514334",
@@ -350,7 +350,7 @@ def historical():
     #return response4
     return render_template("historic.html", data=(b_val))
 
-@app.route("/specific_energy", methods=["GET","POST"])
+@app.route("bslems.azurewebsites.net/specific_energy", methods=["GET","POST"])
 def sp_energy():
     try:
         db = mysql.connector.connect(user="sql6514334", password="U2m8kZqyVm", host="sql6.freesqldatabase.com", database="sql6514334",
@@ -371,13 +371,13 @@ def sp_energy():
     return render_template('ems_test_v20.html', data=data8)
 
 
-@app.route("/")
+@app.route("bslems.azurewebsites.net/")
 def index():
     return render_template('ems_test_v20.html')
     
 
 
-@app.route("/historic")
+@app.route("bslems.azurewebsites.net/historic")
 def historic():
     return render_template('historic.html')
 
