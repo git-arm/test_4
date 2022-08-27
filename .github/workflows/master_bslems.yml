@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'BSLems'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_9B810BDC561443D585C5CD065BDE2B0B }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_D3AEB60039CF4F988F68922D39598787 }}
