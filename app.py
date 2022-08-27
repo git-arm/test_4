@@ -3,7 +3,7 @@ import datetime
 import numpy as np
 import mysql.connector
 import datetime
-from flask import Flask, make_response, Response
+from flask import Flask, make_response, Response, json
 from flask import Flask, render_template, jsonify, redirect, request
 from datetime import datetime, time, timedelta
 
