@@ -1,44 +1,12 @@
 import pandas as pd
-#from oauth2client.service_account import ServiceAccountCredentials
 import datetime
-import requests
-from requests.exceptions import ConnectionError
-import bs4
-from bs4 import BeautifulSoup
-import dash
-from dash import dcc
-from dash import html
-#import dash_bootstrap_components as dbc
-from dash.dependencies import Input, Output, State
-import plotly.graph_objs as go
-import plotly.express as px
 import numpy as np
-import pandas as pd
-from tkinter import *
-from tkinter import ttk
-import tkinter as tk
-from tkinter import messagebox
-from tkinter import simpledialog
-#import xlrd
 import mysql.connector
-import threading
-#import psycopg2
-import time
-#from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT
-import select
-import json
-from configparser import ConfigParser
-#import goto
-#import label
-import pandas as pd
-import subprocess
 import datetime
-import pyodbc
-from flask import Flask, make_response, Response
+from flask import Flask, make_response, Response, json
 from flask import Flask, render_template, jsonify, redirect, request
-import threading
 from datetime import datetime, time, timedelta
-import csv
+import json
 
 meter_id = [1]
 
