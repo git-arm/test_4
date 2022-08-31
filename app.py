@@ -27,7 +27,7 @@ def data():
         db = mysql.connector.connect(user="longingoatmeal9", password="4Ubrtd88hgU5YsHCJ9Ls9Q", host="server491829892.mysql.database.azure.com", database="blsdatabase",
                                          port="3306")
         db_cursor = db.cursor()
-        stmt1 = "SELECT voltage from bokaro_1 WHERE meter_id = %s"
+        stmt1 = "SELECT voltage from bokaro_1 WHERE meterID = %s"
         data1 = meter_id
         db_cursor.execute(stmt1,data1)
         data1 = db_cursor.fetchall()
@@ -46,7 +46,7 @@ def data():
         db2 = mysql.connector.connect(user="longingoatmeal9", password="4Ubrtd88hgU5YsHCJ9Ls9Q", host="server491829892.mysql.database.azure.com", database="blsdatabase",
                                          port="3306")
         db2_cursor = db2.cursor()
-        stmt2 = "SELECT time_stamp from bokaro_1 WHERE meter_id = %s"
+        stmt2 = "SELECT time_stamp from bokaro_1 WHERE meterID = %s"
         data2_m = meter_id
         db2_cursor.execute(stmt2,data2_m)
         data2 = db2_cursor.fetchall()
@@ -65,7 +65,7 @@ def data():
         db = mysql.connector.connect(user="longingoatmeal9", password="4Ubrtd88hgU5YsHCJ9Ls9Q", host="server491829892.mysql.database.azure.com", database="blsdatabase",
                                          port="3306")
         db_cursor = db.cursor()
-        stmt1 = "SELECT current from bokaro_1 WHERE meter_id = %s"
+        stmt1 = "SELECT current from bokaro_1 WHERE meterID = %s"
         data3_m = meter_id
         db_cursor.execute(stmt1,data3_m)
         data3 = db_cursor.fetchall()
@@ -84,7 +84,7 @@ def data():
         db = mysql.connector.connect(user="longingoatmeal9", password="4Ubrtd88hgU5YsHCJ9Ls9Q", host="server491829892.mysql.database.azure.com", database="blsdatabase",
                                          port="3306")
         db_cursor = db.cursor()
-        stmt1 = "SELECT frequency from bokaro_1 WHERE meter_id = %s"
+        stmt1 = "SELECT frequency from bokaro_1 WHERE meterID = %s"
         data4_m = meter_id
         db_cursor.execute(stmt1,data4_m)
         data4 = db_cursor.fetchall()
@@ -102,7 +102,7 @@ def data():
         db2 = mysql.connector.connect(user="longingoatmeal9", password="4Ubrtd88hgU5YsHCJ9Ls9Q", host="server491829892.mysql.database.azure.com", database="blsdatabase",
                                          port="3306")
         db2_cursor = db2.cursor()
-        stmt2 = "SELECT total_harmonic_distortion from bokaro_1 WHERE meter_id = %s"
+        stmt2 = "SELECT total_harmonic_distortion from bokaro_1 WHERE meterID = %s"
         data2_m = meter_id
         db2_cursor.execute(stmt2,data2_m)
         data2 = db2_cursor.fetchall()
@@ -121,7 +121,7 @@ def data():
         db2 = mysql.connector.connect(user="longingoatmeal9", password="4Ubrtd88hgU5YsHCJ9Ls9Q", host="server491829892.mysql.database.azure.com", database="blsdatabase",
                                          port="3306")
         db2_cursor = db2.cursor()
-        stmt2 = "SELECT apparent_energy from bokaro_1 WHERE meter_id = %s"
+        stmt2 = "SELECT apparent_energy from bokaro_1 WHERE meterID = %s"
         data2_m = meter_id
         db2_cursor.execute(stmt2,data2_m)
         data2 = db2_cursor.fetchall()
@@ -140,7 +140,7 @@ def data():
         db2 = mysql.connector.connect(user="longingoatmeal9", password="4Ubrtd88hgU5YsHCJ9Ls9Q", host="server491829892.mysql.database.azure.com", database="blsdatabase",
                                          port="3306")
         db2_cursor = db2.cursor()
-        stmt2 = "SELECT power_factor from bokaro_1 WHERE meter_id = %s"
+        stmt2 = "SELECT power_factor from bokaro_1 WHERE meterID = %s"
         data2_m = meter_id
         db2_cursor.execute(stmt2,data2_m)
         data2 = db2_cursor.fetchall()
@@ -159,7 +159,7 @@ def data():
         db2 = mysql.connector.connect(user="longingoatmeal9", password="4Ubrtd88hgU5YsHCJ9Ls9Q", host="server491829892.mysql.database.azure.com", database="blsdatabase",
                                          port="3306")
         db2_cursor = db2.cursor()
-        stmt2 = "SELECT energy from bokaro_1 WHERE meter_id = %s"
+        stmt2 = "SELECT energy from bokaro_1 WHERE meterID = %s"
         data2_m = meter_id
         db2_cursor.execute(stmt2,data2_m)
         data2 = db2_cursor.fetchall()
@@ -178,7 +178,7 @@ def data():
         db2 = mysql.connector.connect(user="longingoatmeal9", password="4Ubrtd88hgU5YsHCJ9Ls9Q", host="server491829892.mysql.database.azure.com", database="blsdatabase",
                                          port="3306")
         db2_cursor = db2.cursor()
-        stmt2 = "SELECT power from bokaro_1 WHERE meter_id = %s"
+        stmt2 = "SELECT power from bokaro_1 WHERE meterID = %s"
         data2_m = meter_id
         db2_cursor.execute(stmt2,data2_m)
         data2 = db2_cursor.fetchall()
@@ -197,7 +197,7 @@ def data():
         db2 = mysql.connector.connect(user="longingoatmeal9", password="4Ubrtd88hgU5YsHCJ9Ls9Q", host="server491829892.mysql.database.azure.com", database="blsdatabase",
                                          port="3306")
         db2_cursor = db2.cursor()
-        stmt2 = "SELECT apparent_power from bokaro_1 WHERE meter_id = %s"
+        stmt2 = "SELECT apparent_power from bokaro_1 WHERE meterID = %s"
         data2_m = meter_id
         db2_cursor.execute(stmt2,data2_m)
         data2 = db2_cursor.fetchall()
@@ -216,7 +216,7 @@ def data():
         db2 = mysql.connector.connect(user="longingoatmeal9", password="4Ubrtd88hgU5YsHCJ9Ls9Q", host="server491829892.mysql.database.azure.com", database="blsdatabase",
                                          port="3306")
         db2_cursor = db2.cursor()
-        stmt2 = "SELECT location from bokaro_1_loc WHERE meter_id = %s"
+        stmt2 = "SELECT location from bokaro_1_loc WHERE meterID = %s"
         data2_m = meter_id
         db2_cursor.execute(stmt2,data2_m)
         data2 = db2_cursor.fetchall()
@@ -255,7 +255,7 @@ def getPlotCSV():
         db = mysql.connector.connect(user="longingoatmeal9", password="4Ubrtd88hgU5YsHCJ9Ls9Q", host="server491829892.mysql.database.azure.com", database="blsdatabase",
                                          port="3306")
         db_cursor = db.cursor()
-        stmt1 = "SELECT * from bokaro_1 WHERE meter_id =%s "
+        stmt1 = "SELECT * from bokaro_1 WHERE meterID =%s "
         data5_m = meter_id
         db_cursor.execute(stmt1, data5_m)
         data5 = db_cursor.fetchall()
