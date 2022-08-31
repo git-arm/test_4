@@ -24,10 +24,10 @@ app = Flask(__name__)
 def data():
     global meter_id
     try:
-        db = mysql.connector.connect(user="sql6514334", password="U2m8kZqyVm", host="sql6.freesqldatabase.com", database="sql6514334",
-                                     port="3306")
+        db = mysql.connector.connect(user="longingoatmeal9", password="4Ubrtd88hgU5YsHCJ9Ls9Q", host="server491829892.mysql.database.azure.com", database="blsdatabase",
+                                         port="3306")
         db_cursor = db.cursor()
-        stmt1 = "SELECT voltage from sql6514334.bokaro_1 WHERE meter_id = %s"
+        stmt1 = "SELECT voltage from bokaro_1 WHERE meter_id = %s"
         data1 = meter_id
         db_cursor.execute(stmt1,data1)
         data1 = db_cursor.fetchall()
@@ -43,10 +43,10 @@ def data():
     except mysql.connector.Error as err:
         print("Something went wrong: {}".format(err))
     try:
-        db2 = mysql.connector.connect(user="sql6514334", password="U2m8kZqyVm", host="sql6.freesqldatabase.com", database="sql6514334",
-                                     port="3306")
+        db2 = mysql.connector.connect(user="longingoatmeal9", password="4Ubrtd88hgU5YsHCJ9Ls9Q", host="server491829892.mysql.database.azure.com", database="blsdatabase",
+                                         port="3306")
         db2_cursor = db2.cursor()
-        stmt2 = "SELECT time_stamp from sql6514334.bokaro_1 WHERE meter_id = %s"
+        stmt2 = "SELECT time_stamp from bokaro_1 WHERE meter_id = %s"
         data2_m = meter_id
         db2_cursor.execute(stmt2,data2_m)
         data2 = db2_cursor.fetchall()
@@ -62,10 +62,10 @@ def data():
         print("Something went wrong: {}".format(err))
 
     try:
-        db = mysql.connector.connect(user="sql6514334", password="U2m8kZqyVm", host="sql6.freesqldatabase.com", database="sql6514334",
-                                     port="3306")
+        db = mysql.connector.connect(user="longingoatmeal9", password="4Ubrtd88hgU5YsHCJ9Ls9Q", host="server491829892.mysql.database.azure.com", database="blsdatabase",
+                                         port="3306")
         db_cursor = db.cursor()
-        stmt1 = "SELECT current from sql6514334.bokaro_1 WHERE meter_id = %s"
+        stmt1 = "SELECT current from bokaro_1 WHERE meter_id = %s"
         data3_m = meter_id
         db_cursor.execute(stmt1,data3_m)
         data3 = db_cursor.fetchall()
@@ -81,10 +81,10 @@ def data():
         print("Something went wrong: {}".format(err))
 
     try:
-        db = mysql.connector.connect(user="sql6514334", password="U2m8kZqyVm", host="sql6.freesqldatabase.com", database="sql6514334",
-                                     port="3306")
+        db = mysql.connector.connect(user="longingoatmeal9", password="4Ubrtd88hgU5YsHCJ9Ls9Q", host="server491829892.mysql.database.azure.com", database="blsdatabase",
+                                         port="3306")
         db_cursor = db.cursor()
-        stmt1 = "SELECT frequency from sql6514334.bokaro_1 WHERE meter_id = %s"
+        stmt1 = "SELECT frequency from bokaro_1 WHERE meter_id = %s"
         data4_m = meter_id
         db_cursor.execute(stmt1,data4_m)
         data4 = db_cursor.fetchall()
@@ -99,10 +99,10 @@ def data():
     except mysql.connector.Error as err:
         print("Something went wrong: {}".format(err))
     try:
-        db2 = mysql.connector.connect(user="sql6514334", password="U2m8kZqyVm", host="sql6.freesqldatabase.com", database="sql6514334",
-                                     port="3306")
+        db2 = mysql.connector.connect(user="longingoatmeal9", password="4Ubrtd88hgU5YsHCJ9Ls9Q", host="server491829892.mysql.database.azure.com", database="blsdatabase",
+                                         port="3306")
         db2_cursor = db2.cursor()
-        stmt2 = "SELECT total_harmonic_distortion from sql6514334.bokaro_1 WHERE meter_id = %s"
+        stmt2 = "SELECT total_harmonic_distortion from bokaro_1 WHERE meter_id = %s"
         data2_m = meter_id
         db2_cursor.execute(stmt2,data2_m)
         data2 = db2_cursor.fetchall()
@@ -118,10 +118,10 @@ def data():
         print("Something went wrong: {}".format(err))
 
     try:
-        db2 = mysql.connector.connect(user="sql6514334", password="U2m8kZqyVm", host="sql6.freesqldatabase.com", database="sql6514334",
-                                     port="3306")
+        db2 = mysql.connector.connect(user="longingoatmeal9", password="4Ubrtd88hgU5YsHCJ9Ls9Q", host="server491829892.mysql.database.azure.com", database="blsdatabase",
+                                         port="3306")
         db2_cursor = db2.cursor()
-        stmt2 = "SELECT apparent_energy from sql6514334.bokaro_1 WHERE meter_id = %s"
+        stmt2 = "SELECT apparent_energy from bokaro_1 WHERE meter_id = %s"
         data2_m = meter_id
         db2_cursor.execute(stmt2,data2_m)
         data2 = db2_cursor.fetchall()
@@ -137,10 +137,10 @@ def data():
         print("Something went wrong: {}".format(err))
 
     try:
-        db2 = mysql.connector.connect(user="sql6514334", password="U2m8kZqyVm", host="sql6.freesqldatabase.com", database="sql6514334",
-                                     port="3306")
+        db2 = mysql.connector.connect(user="longingoatmeal9", password="4Ubrtd88hgU5YsHCJ9Ls9Q", host="server491829892.mysql.database.azure.com", database="blsdatabase",
+                                         port="3306")
         db2_cursor = db2.cursor()
-        stmt2 = "SELECT power_factor from sql6514334.bokaro_1 WHERE meter_id = %s"
+        stmt2 = "SELECT power_factor from bokaro_1 WHERE meter_id = %s"
         data2_m = meter_id
         db2_cursor.execute(stmt2,data2_m)
         data2 = db2_cursor.fetchall()
@@ -156,10 +156,10 @@ def data():
         print("Something went wrong: {}".format(err))
 
     try:
-        db2 = mysql.connector.connect(user="sql6514334", password="U2m8kZqyVm", host="sql6.freesqldatabase.com", database="sql6514334",
-                                     port="3306")
+        db2 = mysql.connector.connect(user="longingoatmeal9", password="4Ubrtd88hgU5YsHCJ9Ls9Q", host="server491829892.mysql.database.azure.com", database="blsdatabase",
+                                         port="3306")
         db2_cursor = db2.cursor()
-        stmt2 = "SELECT energy from sql6514334.bokaro_1 WHERE meter_id = %s"
+        stmt2 = "SELECT energy from bokaro_1 WHERE meter_id = %s"
         data2_m = meter_id
         db2_cursor.execute(stmt2,data2_m)
         data2 = db2_cursor.fetchall()
@@ -175,10 +175,10 @@ def data():
         print("Something went wrong: {}".format(err))
 
     try:
-        db2 = mysql.connector.connect(user="sql6514334", password="U2m8kZqyVm", host="sql6.freesqldatabase.com", database="sql6514334",
-                                     port="3306")
+        db2 = mysql.connector.connect(user="longingoatmeal9", password="4Ubrtd88hgU5YsHCJ9Ls9Q", host="server491829892.mysql.database.azure.com", database="blsdatabase",
+                                         port="3306")
         db2_cursor = db2.cursor()
-        stmt2 = "SELECT power from sql6514334.bokaro_1 WHERE meter_id = %s"
+        stmt2 = "SELECT power from bokaro_1 WHERE meter_id = %s"
         data2_m = meter_id
         db2_cursor.execute(stmt2,data2_m)
         data2 = db2_cursor.fetchall()
@@ -194,10 +194,10 @@ def data():
         print("Something went wrong: {}".format(err))
 
     try:
-        db2 = mysql.connector.connect(user="sql6514334", password="U2m8kZqyVm", host="sql6.freesqldatabase.com", database="sql6514334",
-                                     port="3306")
+        db2 = mysql.connector.connect(user="longingoatmeal9", password="4Ubrtd88hgU5YsHCJ9Ls9Q", host="server491829892.mysql.database.azure.com", database="blsdatabase",
+                                         port="3306")
         db2_cursor = db2.cursor()
-        stmt2 = "SELECT apparent_power from sql6514334.bokaro_1 WHERE meter_id = %s"
+        stmt2 = "SELECT apparent_power from bokaro_1 WHERE meter_id = %s"
         data2_m = meter_id
         db2_cursor.execute(stmt2,data2_m)
         data2 = db2_cursor.fetchall()
@@ -213,10 +213,10 @@ def data():
         print("Something went wrong: {}".format(err))
 
     try:
-        db2 = mysql.connector.connect(user="sql6514334", password="U2m8kZqyVm", host="sql6.freesqldatabase.com", database="sql6514334",
-                                     port="3306")
+        db2 = mysql.connector.connect(user="longingoatmeal9", password="4Ubrtd88hgU5YsHCJ9Ls9Q", host="server491829892.mysql.database.azure.com", database="blsdatabase",
+                                         port="3306")
         db2_cursor = db2.cursor()
-        stmt2 = "SELECT location from sql6514334.bokaro_1_loc WHERE meter_id = %s"
+        stmt2 = "SELECT location from bokaro_1_loc WHERE meter_id = %s"
         data2_m = meter_id
         db2_cursor.execute(stmt2,data2_m)
         data2 = db2_cursor.fetchall()
@@ -252,10 +252,10 @@ def meter():
 @app.route("/getPlotCSV")
 def getPlotCSV():
     try:
-        db = mysql.connector.connect(user="sql6514334", password="U2m8kZqyVm", host="sql6.freesqldatabase.com", database="sql6514334",
-                                     port="3306")
+        db = mysql.connector.connect(user="longingoatmeal9", password="4Ubrtd88hgU5YsHCJ9Ls9Q", host="server491829892.mysql.database.azure.com", database="blsdatabase",
+                                         port="3306")
         db_cursor = db.cursor()
-        stmt1 = "SELECT * from sql6514334.bokaro_1 WHERE meter_id =%s "
+        stmt1 = "SELECT * from bokaro_1 WHERE meter_id =%s "
         data5_m = meter_id
         db_cursor.execute(stmt1, data5_m)
         data5 = db_cursor.fetchall()
@@ -299,10 +299,10 @@ def getPlotCSV():
 @app.route("/getexcel")#, methods=["GET","POST"])
 def getexcel():
     try:
-        db = mysql.connector.connect(user="sql6514334", password="U2m8kZqyVm", host="sql6.freesqldatabase.com", database="sql6514334",
-                                     port="3306")
+        db = mysql.connector.connect(user="longingoatmeal9", password="4Ubrtd88hgU5YsHCJ9Ls9Q", host="server491829892.mysql.database.azure.com", database="blsdatabase",
+                                         port="3306")
         db_cursor = db.cursor()
-        stmt1 = "SELECT * from sql6514334.bokaro_1 "
+        stmt1 = "SELECT * from bokaro_1 "
         data5_m = meter_id
         db_cursor.execute(stmt1)
         data7 = db_cursor.fetchall()
@@ -327,10 +327,10 @@ def getexcel():
 @app.route("/historical", methods=["POST"])
 def historical():
     try:
-        db = mysql.connector.connect(user="sql6514334", password="U2m8kZqyVm", host="sql6.freesqldatabase.com", database="sql6514334",
-                                     port="3306")
+        db = mysql.connector.connect(user="longingoatmeal9", password="4Ubrtd88hgU5YsHCJ9Ls9Q", host="server491829892.mysql.database.azure.com", database="blsdatabase",
+                                         port="3306")
         db_cursor = db.cursor()
-        stmt1 = "SELECT * from sql6514334.bokaro_1 "
+        stmt1 = "SELECT * from bokaro_1 "
         data5_m = meter_id
         db_cursor.execute(stmt1)
         data8 = db_cursor.fetchall()
@@ -354,10 +354,10 @@ def historical():
 @app.route("/specific_energy", methods=["GET","POST"])
 def sp_energy():
     try:
-        db = mysql.connector.connect(user="sql6514334", password="U2m8kZqyVm", host="sql6.freesqldatabase.com", database="sql6514334",
-                                     port="3306")
+        db = mysql.connector.connect(user="longingoatmeal9", password="4Ubrtd88hgU5YsHCJ9Ls9Q", host="server491829892.mysql.database.azure.com", database="blsdatabase",
+                                         port="3306")
         db_cursor = db.cursor()
-        stmt1 = "SELECT SUM(energy) from sql6514334.bokaro_1 WHERE time_stamp BETWEEN %s AND %s"
+        stmt1 = "SELECT SUM(energy) from bokaro_1 WHERE time_stamp BETWEEN %s AND %s"
         data_allday_yesterday = (yesterday_midnight.timestamp(), midnight.timestamp())
         data5_m = meter_id
         db_cursor.execute(stmt1,data_allday_yesterday)
