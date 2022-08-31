@@ -18,47 +18,7 @@ yesterday_midnight = midnight - timedelta(days=1)
 
 
 
-def mysqldatabase_read():
-    global x_value
-    global y_value
-    try:
-        db = mysql.connector.connect(user="longingoatmeal9", password="4Ubrtd88hgU5YsHCJ9Ls9Q", host="server491829892.mysql.database.azure.com", database="blsdatabase", port="3306")
-        db_cursor = db.cursor()
-        stmt1 = "SELECT voltage from bokaro_temp WHERE meterID = 1"
-        db_cursor.execute(stmt1)
-        data1 = db_cursor.fetchall()
-        db.commit()
-        db.close()
-        y_values = pd.DataFrame(data1)
-        #print((y_values.T).iloc[:,0:].values)
-        y_val = ((y_values.T).values.tolist())
-        #print((y_values.T).to_numpy())
-        #print(y_val[0])
-        y_value = y_val[0]
-    except mysql.connector.Error as err:
-        print("Something went wrong: {}".format(err))
-    try:
-        db2 = mysql.connector.connect(user="longingoatmeal9", password="4Ubrtd88hgU5YsHCJ9Ls9Q", host="server491829892.mysql.database.azure.com", database="blsdatabase", port="3306")
-        db2_cursor = db2.cursor()
-        stmt2 = "SELECT time_info from bokaro_temp WHERE meterID = 1"
-        db2_cursor.execute(stmt2)
-        data2 = db2_cursor.fetchall()
-        db2.commit()
-        db2.close()
-        x_values = pd.DataFrame(data2)
-        #print((y_values.T).iloc[:,0:].values)
-        x_val = ((x_values.T).values.tolist())
-        #print((y_values.T).to_numpy())
-        print(x_val[0])
-        x_value = x_val[0]
-    except mysql.connector.Error as err:
-        print("Something went wrong: {}".format(err))
 
-    time.sleep(5)
-    mysqldatabase_read()
-
-th1 = threading.Thread(target=mysqldatabase_read, daemon=True)
-#th1.start()
 
 app = Flask(__name__)
 
