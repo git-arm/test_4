@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <!--date_time picker -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    
+    
+    <!--highcharts -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+
+
+</head>
+<body>
+    <div class="historic">
+        <h1>Historic Data</h1>
+        <div class="form_pick">
+            <form method="post" action="https://bslems.azurewebsites.net/historical" style="margin:auto; display:flex; gap:5%;">
+              <div class="date_time_pick">
+              <label for="MeterNo.">Select Date-time :</label>       
+              <input class="daterange" type="text" name="daterange" size="35"/>
+              </div>
+                <script type="text/javascript">
+                $(function() {
+                  $('input[name="daterange"]').daterangepicker({
+                    timePicker: true,
+                    timePickerIncrement: 30,
+                    locale: {
+                    format: 'MM/DD/YYYY h:mm A'
+                    } 
+                  });
+                });
+                </script>
+              <br>
+              <br>
+              <div class="meterbox">
+                <label for="MeterNo.">Select Meter No. :</label>
+                  <select class="meterid" id="meterid" name="meter_id" type="text" placeholder ="Please select a meter">
+                    <option disabled selected>Select a meter</option>
+                    <option value="1">Meter 1</option>
+                    <option value="2">Meter 2</option>
+                    <option value="3">Meter 3</option>
+                    <option value="4">Meter 4</option>
+                  </select>
+              </div>
+        
+              <input class="submit" type="submit" value="Submit">       
+            </form>
+        </div>
+        <div id="datatable">
+            <table style="width: 100%">
+                <tr>
+                  <th>meterID</th>
+                  <th>time_stamp</th>
+                  <th>Voltage</th>
+                  <th>Current</th>
+                  <th>Frequency</th>
+                  <th>total_harmonic_distortion</th>
+                  <th>apparent_energy</th>
+                  <th>power_factor</th>
+                  <th>energy</th>
+                  <th>power</th>
+                  <th>apparent_power</th>
+
+          
+                </tr>
+                {% for row in data %}
+                <tr>
+                  {% for cell in row %}
+                  <td>{{ cell }}</td>
+                  {% endfor %}
+                </tr>
+                {% endfor %}
+              </table>
+        </div>
+
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+      <div id="container"></div>
+    
+
+<script>
+
+Highcharts.chart('container', {
+
+    chart: {
+        zoomType: 'xy'
+    },
+    
+    title: {
+        text: 'Historic Data'
+    },
+    
+    yAxis: {
+        title: {
+            text: 'Value'
+        }
+    },
+    
+    xAxis: {
+            type: 'datetime',
+            categories: {{ data0 }}
+        },
+    
+    legend: {
+        layout: 'vertical',
+        align: 'right',
+        verticalAlign: 'middle'
+    },
+    
+    plotOptions: {
+        series: {
+            label: {
+                connectorAllowed: false
+            },
+            
+        }
+    },
+    series: [{
+        name: 'Voltage',
+        data: {{ data1 }},
+
+    },
+    {
+        name: 'Current',
+        data: {{ data2 }},
+
+    },
+    {
+        name: 'Frequency',
+        data: {{ data3 }},
+
+    }, 
+    {
+        name: 'Total_harmonic_distortion',
+        data: {{ data4 }},
+
+    },
+    {
+        name: 'Apparent_energy',
+        data: {{ data5 }},
+
+    },
+    {
+        name: 'Power_factor',
+        data: {{ data6 }},
+
+    },
+    {
+        name: 'Energy',
+        data: {{ data7 }},
+
+    },
+    {
+        name: 'Power',
+        data: {{ data8 }},
+
+    },
+    {
+        name: 'Apparent_power',
+        data: {{ data9 }},
+
+    }],
+    
+    responsive: {
+        rules: [{
+            condition: {
+                maxWidth: 500
+            },
+            chartOptions: {
+                legend: {
+                    layout: 'horizontal',
+                    align: 'center',
+                    verticalAlign: 'bottom'
+                }
+            }
+        }]
+    }
+});
+</script>
+</body>
+<style>
+.historic{
+    height: 300px;
+    row-gap: 40px;
+}
+.submit{
+    height: 36px;
+}
+.form_pick{
+    padding-left: 5%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    text-align: center;   
+}
+.daterange{
+    height: 30px;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+.meterbox{
+  padding: 10px;
+
+}
+#datatable{
+  height: 300px;
+  overflow-y: scroll;
+}
+#container{
+    margin-top: 5%;
+}
+</style>
+</html>
