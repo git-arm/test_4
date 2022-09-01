@@ -854,14 +854,17 @@ body{
     border: 0;
     box-sizing: border-box;
     height: 100vh;
+    min-width: 960px;
+    overflow: auto;
+    overflow-x: auto;
+    overflow-y: auto;
     
 }
 .home .left {
     width: 30%;
     border: solid black 1px;
-    height: 100%;
     min-height: fit-content;
-    overflow: hidden;
+    overflow: auto;
     overflow-y: scroll;
     padding-left: 1%;
     padding-right: 1%;
@@ -934,12 +937,13 @@ body{
     font-size: large;
 }
 .buttons{
-    height: fit-content;
+    margin-bottom: 20px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding-left: 20px;
     margin-top: 20px;
-    grid-gap: 50%;
+    position: relative;
+    min-height: max-content;
 }
 .buttons a{
 	display: block;
@@ -968,10 +972,14 @@ body{
 	border-radius: 5px;
 	font-size: 20px;
     border: none;
-    margin-top: 5px;
+    margin-top: 10px;
 }
 .buttons .a:hover {
 	background: #00729D;
+}
+.btns{
+    position:absolute;
+    right: 20px;
 }
 .modal {
   display: none; /* Hidden by default */
@@ -1024,10 +1032,10 @@ body{
     margin: 0%;
 }
 
-.graphs{
-    margin-top: 10px;
-    padding: 30px;
-    height: 80vh;
+.graphs{  
+
+    padding: 20px;
+    max-height: 75%;
     overflow: auto;
     overflow-y: scroll;
 }
