@@ -97,7 +97,7 @@
                 <div class="energy_meter">               <!-- Energy Calculation -->
                     <div class="calculation">
                         <div class="put">
-                            <h1 class="values"><a href="http://bslems.azurewebsites.net/specific_energy">Energy Consumption of previous day:</a></h1>
+                            <h1 class="values"><a href="https://bslems.azurewebsites.net/specific_energy">Energy Consumption of previous day:</a></h1>
                             <input type="number" id="t1" value="{{ data1 }}" disabled>
                         </div>
                         <div class="put">                        
@@ -123,7 +123,7 @@
             <div class="buttons">
                 <div class="meterbox">
                     <label for="MeterNo.">Select Meter No.:</label>
-                    <form method="post" action="http://bslems.azurewebsites.net/">
+                    <form method="post" action="https://bslems.azurewebsites.net/">
                         <select  id="meterid" name="meter_id" type="text" placeholder ="Please select a meter">
                             <option disabled selected style>Select a meter</option>
                             <option value="1">Meter 1</option>
@@ -136,7 +136,7 @@
                 </div>
                 <div class="btns">
                     <div class="downloadbtn">
-                        <a href="http://bslems.azurewebsites.net/getPlotCSV">
+                        <a href="https://bslems.azurewebsites.net/getPlotCSV">
                             Download
                         </a>
                     </div>
@@ -347,7 +347,7 @@
                     function requestData()
                     {
                         // Ajax call to get the Data from Flask
-                        var requests = $.get('http://bslems.azurewebsites.net/data');
+                        var requests = $.get('https://bslems.azurewebsites.net/data');
             
                         var tm = requests.done(function (result)
                         {
