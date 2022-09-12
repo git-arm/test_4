@@ -99,7 +99,7 @@
                     <div class="calculation">
                         <div class="put">
                             <h1 class="values"><a href="https://bslems.azurewebsites.net/specific_energy">Energy Consumption of previous day:</a></h1>
-                            <input type="number" id="t1" value="{{ data1 }}" disabled>
+                            <input type="number" id="t1" value="{{ data2 }}" disabled>
                         </div>
                         <div class="put">                        
                             <h1 class="values">Total production of Previous Day:</h1>
@@ -124,7 +124,7 @@
             <div class="buttons">
                 <div class="meterbox">
                     <label for="MeterNo.">Select Meter No.:</label>
-                    <form method="post" action="https://bslems.azurewebsites.net/">
+                    <form method="post" action="https://bslems.azurewebsites.net/home">
                         <select  id="meterid" name="meter_id" type="text" placeholder ="Please select a meter">
                             <option disabled selected style>Select a meter</option>
                             <option value="1">Meter 1</option>
