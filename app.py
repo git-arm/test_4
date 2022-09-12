@@ -234,7 +234,7 @@ def data():
     return response1
 
 
-@app.route("/", methods=["POST"])
+@app.route("/home", methods=["POST"])
 def meter():
     global meter_id
     meter_id = [int(request.form.get("meter_id"))]
@@ -264,8 +264,29 @@ def meter():
         print("Something went wrong: {}".format(err))
     response4 = make_response(json.dumps(b_val))
     response4.content_type = 'applicatopn/json'
+    
+        try:
+        db = mysql.connector.connect(user="longingoatmeal9", password="4Ubrtd88hgU5YsHCJ9Ls9Q", host="server491829892.mysql.database.azure.com", database="blsdatabase", port="3306")
+        db_cursor = db.cursor()
+        stmt1 = "SELECT SUM(energy) from bokaro_1 WHERE time_stamp BETWEEN %s AND %s"
+        data_allday_yesterday = (yesterday_midnight.timestamp(), midnight.timestamp())
+        data5_m = meter_id
+        db_cursor.execute(stmt1, data_allday_yesterday)
+        data8 = db_cursor.fetchall()
+        db.commit()
+        db.close()
+        #b_values = pd.DataFrame(data8, columns=['meterID', 'time_stamp', 'voltage', 'current', 'frequency'])
+        # print((y_values.T).iloc[:,0:].values)
+        #b_val = ((b_values).values.tolist())
+        # print((y_values.T).to_numpy())
+        print(data8)
+        #b_value_c = b_val[0][0]
+    except mysql.connector.Error as err:
+        print("Something went wrong: {}".format(err))
+    response4 = make_response(json.dumps(data8))
+    response4.content_type = 'applicatopn/json'
 
-    return render_template('ems_test_v21.html',data1=(b_val))
+    return render_template('ems_test_v21.html', data1=(b_val), data2=(data8))
 
 
 @app.route("/getPlotCSV")
@@ -480,7 +501,7 @@ def sp_energy():
 @app.route("/")
 def index():
     data='Please select a meter from home page'
-    return render_template('ems_test_v21.html', data0=(data))
+    return render_template('mapping.html', data0=(data))
     #return render_template('datasheet.html')
 
 
