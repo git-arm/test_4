@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapping page</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div class="main">
+        
+        <div class="meter 1"><form action="https://bslems.azurewebsites.net/home" method="post"><select class="select" name="meter_id"><option value="1"></option></select><input class="img"type="image" src="{{url_for('static', filename='electric-meter.png')}}" alt="Submit" width="100px" height="80px" allign="center"></form><div class="meter_data"><h1 class="meterID">MeterID: Meter 1</h1><h1 class="meterloc">Meter Location: GMBS-ROOM1_METER1</h1></div></div>
+        <div class="meter 2"><form action="https://bslems.azurewebsites.net/home" method="post"><select class="select" name="meter_id"><option value="2"></option></select><input class="img"type="image" src="{{url_for('static', filename='electric-meter.png')}}" alt="Submit" width="100px" height="80px" allign="center"></form><div class="meter_data"><h1 class="meterID">MeterID: Meter 2</h1><h1 class="meterloc">Meter Location: GMBS-ROOM1_METER2</h1></div></div>
+        <div class="meter 3"><form action="https://bslems.azurewebsites.net/home" method="post"><select class="select" name="meter_id"><option value="3"></option></select><input class="img"type="image" src="{{url_for('static', filename='electric-meter.png')}}" alt="Submit" width="100px" height="80px" allign="center"></form><div class="meter_data"><h1 class="meterID">MeterID: Meter 3</h1><h1 class="meterloc">Meter Location: GMBS-ROOM1_METER3</h1></div></div>
+        </form>
+    
+    </div>
+</body>
+
+<style>
+body{
+    margin: 0;
+    padding: 0;
+    background-color: bisque;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+.main{
+    border: solid black 1px;
+    min-width: 300px;
+    width: fit-content;
+    margin: auto;
+}
+.meter{
+    border: solid black 1px;
+    display: flex;
+    padding: 5px;
+    gap: 40px;
+    font-size: small;
+    margin: 10px;
+}
+.img{
+    text-align: center;
+}
+.meter_data{
+    font-size: x-small;
+}
+.material-icons {
+    font-size: 60px;
+    display: inline-block;
+    align-self: center;
+}
+.select{
+    display: none;
+}
+</style>
+</html>
