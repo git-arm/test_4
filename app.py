@@ -478,7 +478,7 @@ def sp_energy():
     try:
         db = mysql.connector.connect(user="longingoatmeal9", password="4Ubrtd88hgU5YsHCJ9Ls9Q", host="server491829892.mysql.database.azure.com", database="blsdatabase", port="3306")
         db_cursor = db.cursor()
-        stmt1 = "SELECT SUM(energy) from bokaro_1 WHERE time_stamp BETWEEN %s AND %s"
+        stmt1 = "SELECT SUM(energy) from energy_data WHERE time_stamp BETWEEN %s AND %s"
         data_allday_yesterday = (yesterday_midnight.timestamp(), midnight.timestamp())
         data5_m = meter_id
         db_cursor.execute(stmt1, data_allday_yesterday)
