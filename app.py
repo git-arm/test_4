@@ -265,7 +265,7 @@ def meter():
     response4 = make_response(json.dumps(b_val))
     response4.content_type = 'applicatopn/json'
     
-        try:
+    try:
         db = mysql.connector.connect(user="longingoatmeal9", password="4Ubrtd88hgU5YsHCJ9Ls9Q", host="server491829892.mysql.database.azure.com", database="blsdatabase", port="3306")
         db_cursor = db.cursor()
         stmt1 = "SELECT SUM(energy) from bokaro_1 WHERE time_stamp BETWEEN %s AND %s"
